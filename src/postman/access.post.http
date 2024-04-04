@@ -1,0 +1,4 @@
+@url=http://localhost:3052/v1/api/
+
+### signup
+POST {{url}}/shop/signup HTTP/1.1

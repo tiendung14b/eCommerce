@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3055
 const {app: {port}} = require('./src/configs/config.mongodb')
 
 const server = app.listen(port, () => {
-  console.log(`Server starts with ${port}`);
+  console.log(`Server starts with ${port}`);  
 })
 
 process.on('SIGINT', () => {

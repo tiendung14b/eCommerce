@@ -15,18 +15,12 @@ app.use(compression())
 
 require('./dbs/init.mongodb')
 const { checkOverload } = require('./helpers/check.connect')
-checkOverload()
+// checkOverload()
 
 //init debug
 
 // init routes
-app.get('/', (req, res, next) => {
-  const strConp = 'hello from ecomerce app'
-  res.status(200).json({
-    message: 'success',
-    metadata: strConp.repeat(10000)
-  })
-})
+app.use('/', require('./routes'))
 // handle error
 
 module.exports = app
